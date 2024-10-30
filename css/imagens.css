@@ -1,0 +1,17 @@
+/* Ajustando o estilo da imagem dentro do card */
+#movie-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Borda arredondada para a imagem */
+    margin-bottom: 10px;
+}
+
+/* Estilo de cada item (cartão) de filme */
+#movie-list .movie-item {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}

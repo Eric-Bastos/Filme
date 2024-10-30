@@ -1,0 +1,117 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #E50914; /* Cor característica da Netflix */
+}
+
+header input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #E50914;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+header input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Estilo da lista de filmes */
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Configuração do grid para organizar os filmes lado a lado */
+#movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Define um número flexível de colunas */
+    gap: 20px; /* Espaço entre os cartazes */
+    padding: 20px;
+}
+
+
+/* Estilo individual de cada filme */
+#movie-list div {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+#movie-list div:hover {
+    transform: translateY(-10px);
+}
+
+#movie-list div img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Texto do título do filme */
+#movie-list div h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #E50914;
+}
+
+/* Texto da descrição do filme */
+#movie-list div p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 50px;
+}
+/* Estilo da descrição do filme (inicialmente oculta) */
+#movie-list .movie-item p {
+    opacity: 0; /* Esconder a descrição inicialmente */
+    transition: opacity 0.3s; /* Transição suave */
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    padding: 10px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Mostrar a descrição ao passar o mouse sobre o card */
+#movie-list .movie-item:hover p,
+#movie-list .movie-item:hover .watch-btn {
+    opacity: 1;
+    display: block; /* Mostrar a descrição ao passar o mouse */
+}
+
+/* Efeito hover no botão */
+#movie-list .movie-item .watch-btn:hover {
+    background-color: #b00610;
+}
